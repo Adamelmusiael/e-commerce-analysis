@@ -1,47 +1,55 @@
-# 🛒E-commerce Sales Analysis
+# 🛒 E-commerce Sales Analysis
+## 👋 Introduction
+In this project, I explore an **e-commerce dataset** containing real-life transactional data, making it both an excellent learning opportunity and an engaging analysis. The dataset consists of 500,000 rows with key details about transactions made between **December 1, 2010, and December 9, 2011**. Dataset: https://www.kaggle.com/datasets/carrie1/ecommerce-data
 
-## 👋Introduction
-In this projcet I am diving into interesting e-commerce dataset. I found it greate for learning and enterteining, becouse there are few dataset that have real life data from e-commerce store. The dataset is 500k rows long and has columns that provide key informations about transactions that have been made between 01/12/2010 and 09/12/2011. The store is UK-based and mainly sells unique all-occasion gifts. For searching, exploring and performing basic transformations, I used SQL (PostgresSQL). Visualization, dashboard been created in PowerBI.
+The online store is UK-based, primarily selling unique all-occasion gifts. For data exploration, transformations, and analysis, I used **SQL** (PostgreSQL), while **Power BI** was utilized for visualization and dashboard creation.
 
-## 📝Plan
+## 📝 Project Plan
+### 1. Environment Setup
+I began by setting up a **PostgreSQL** database and configuring my local environment. This involved connecting essential tools to enable seamless data sharing between different platforms.
 
-### 1. Prepare Environment
-  I've started with preparing github and local environment. For this purpose I had to run prepare postgres database and connect necessery programs so I can share my data between them.
+### 2. Exploratory Data Analysis (EDA)
+Understanding the dataset is crucial before performing any transformations or analysis. I initially explored the data in **Excel** for a visual overview and then conducted an in-depth analysis using **SQL in Visual Studio**.  
+👉 More details: sql/EDA.sql
 
-### 2. EDA
-  I belive that you can't move any further without getting known with data. For this I started with excel where I explored data visualy. Then I moved to Visual Studio, where I used SQL to dive deeper into data. For more detailed infomrations go to **sql->EDA.sql** 
+### 3. Data Transformations
+To prepare the dataset for analysis, I applied several transformations:  
+✅ Created **month** and **day** columns for time-based analysis  
+✅ Added an **IsReturn** column to identify potential product returns  
+✅ Filled missing values in the **Description** column  
 
-### 3. Transformations
-  After getting familiar with dataset I've made some transformations that helped me In furhter analysis.  
-  * Created new columns month, day.
-  * Created IsReturn column that highlighted transactions that possibly could be returns.
-  * Filled missing values in description column
+### 4. SQL-Based Data Analysis
+This step involved writing complex **SQL queries** to extract meaningful insights. Key queries were saved as **views** to enhance efficiency and reusability.
+Some key questions explored:
 
-### 4. Analysis in SQL
-  This was probably the most important part of this project. Here I was looking for tips that would help me later on drawing key conclusions. Most important and complex queriesgot saved as views for easier use and saving time. Some of the answered questions:  
-  - What is total income?
-  - What is the average order value?
-  - What are the most often ordered/returned products?
-  - Which clients brought the most profit?
-  - How profit has changed over different time ranges (week, month etc.).
+📊 What is the total income?  
+💰 What is the average order value?  
+📦 Which products are most frequently ordered and returned?  
+🏆 Which customers generated the highest revenue?  
+📅 How did revenue change across different time periods (weekly, monthly, etc.)?  
 
-### 5. Data Visualization in PowerBI
-  In this section I visualized and underlined key informations that I have found earlier. Dashboard was created in simple, elegant dark vibes with interactive options.Here is the final result of my dashboard
-![image](https://github.com/user-attachments/assets/6f2d7d58-a3da-4397-a8bf-680e03e92bc9)
+### 5. Data Visualization in Power BI
+Using Power BI, I designed an interactive dashboard to visualize key findings. The dashboard was styled with a modern, dark theme for a **professional** and **elegant look**.  
+👉 Final Dashboard:  
 
+![image](https://github.com/user-attachments/assets/6f2d7d58-a3da-4397-a8bf-680e03e92bc9)  
 
-### 6. Conclusions
-  Last but not least, I went through all my notes, dashboard, queries and other things to find most important informations and double check my work ;)
+### 6. Final Review & Insights
+After completing the dashboard, I re-examined all queries, notes, and insights to ensure accuracy and extract key business takeaways.
 
-## 💡Conclusions
-Throughout the entire sales period included in the data we can observe some patterns. First of all there were 3 time ranges that in which sales went up:
-* Winter time just like at the very beggining of sales we could observe that sales are the highest around winter (christmas and new year) time.
-* Sales did increase in easter time
-* Also we could notice higher sales in summer.
+## 💡 Key Conclusions
+1️⃣ Sales Trends:
 
-The biggest jump in sales occured since septemper up to the end of the year.  
-Total revenue (excluding returns) was around **11 milions**.  
-Worth taking a looking into are returns. Number of returns was around 11000.  
-What is worth mentioning is the fact that the closer the country is the more income it generates.
-
-
+* Sales peaked during winter, especially around Christmas and New Year.
+* A smaller spike occurred during Easter.
+* Summer also saw an increase, but not as high as winter.
+* The most significant sales growth happened from September to December.
+  
+2️⃣ Revenue & Returns:  
+* The total revenue (excluding returns) was approximately **£11 million**.  
+* Around **11,000 transactions** were identified as potential **returns**, indicating a notable refund rate.
+  
+3️⃣ Geographical Impact:  
+* Closer countries (to the UK) contributed significantly more to total sales.
+  
+This project provided valuable insights into customer behavior and sales trends, demonstrating the power of **SQL** and **Power BI** in e-commerce analytics.
